@@ -61,9 +61,9 @@ Route::post('/konsultasi/{identitas}/proses', 'KonsultasiController@proses')->na
 Route::get('/konsultasi/{identitas}/cetakpdf', 'KonsultasiController@cetakPDF')->name('konsultasi.cetakpdf');
 
 Route::get('/kontak', function(){
-    return view('static.kontak');
+    return view('static.profil-kantor');
 });
 
 Route::get('/informasi', function(){
-    return view('static.informasi');
+    return view('static.news');
 });

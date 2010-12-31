@@ -9,7 +9,7 @@
 				</div>
 				<div class="panel-body">
 					<p class="text-center">
-						Deskripsi informasi
+						Deskripsi informasi jjj adsa d a
 					</p>
 				</div>
 			</div>

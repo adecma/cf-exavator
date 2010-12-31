@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					Kontak
@@ -14,7 +14,7 @@
 						<br>
 						<i class="fa fa-phone"></i> 0511 - 3252634
 						<br>
-						<i class="fa fa-link"></i> http://www.intracopenta.com
+						<i class="fa fa-link"></i> <a href="http://www.intracopenta.com" target="_blank">http://www.intracopenta.com</a>
 
 					</p>
 				</div>
