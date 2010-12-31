@@ -10,7 +10,7 @@ class Solusi extends Model
 
     public $incrementing = false;
 
-    /*function aturans() {
+    function aturans() {
 		return $this->hasMany('App\Aturan', 'solusi_kd');
-	}*/
+	}
 }

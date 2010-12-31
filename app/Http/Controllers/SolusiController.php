@@ -182,6 +182,6 @@ class SolusiController extends Controller
         $pdf = PDF::loadView('solusi.cetakpdf',compact('solusis', 'no'))
             ->setPaper('a4', 'potrait');
  
-        return $pdf->stream('report_solusi-'.Carbon::now()->format('Y_m_d-H_i_s').'.pdf');
+        return $pdf->stream('report_solusi-'.Carbon::now()->format('Y_m_d-U').'.pdf');
     }
 }

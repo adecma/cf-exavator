@@ -182,6 +182,6 @@ class GejalaController extends Controller
         $pdf = PDF::loadView('gejala.cetakpdf',compact('gejalas', 'no'))
             ->setPaper('a4', 'potrait');
  
-        return $pdf->stream('report_gejala-'.Carbon::now()->format('Y_m_d-H_i_s').'.pdf');
+        return $pdf->stream('report_gejala-'.Carbon::now()->format('Y_m_d-U').'.pdf');
     }
 }

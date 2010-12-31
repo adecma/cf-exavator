@@ -10,7 +10,7 @@ class Kerusakan extends Model
 
     public $incrementing = false;
 
-    /*function aturans() {
+    function aturans() {
 		return $this->hasMany('App\Aturan', 'kerusakan_kd');
-	}*/
+	}
 }

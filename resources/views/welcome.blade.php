@@ -68,6 +68,9 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
+                    <a href="{{ route('konsultasi.identitas') }}">Konsultasi</a>
+                    <a href="{{ url('/informasi') }}">Informasi</a>
+                    <a href="{{ url('/kontak') }}">Kontak</a>
                     <a href="{{ url('/login') }}">Login</a>
                 </div>
             @endif

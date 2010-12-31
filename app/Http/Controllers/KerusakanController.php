@@ -181,6 +181,6 @@ class KerusakanController extends Controller
         $pdf = PDF::loadView('kerusakan.cetakpdf',compact('kerusakans', 'no'))
             ->setPaper('a4', 'potrait');
  
-        return $pdf->stream('report_kerusakan-'.Carbon::now()->format('Y_m_d-H_i_s').'.pdf');
+        return $pdf->stream('report_kerusakan-'.Carbon::now()->format('Y_m_d-U').'.pdf');
     }
 }

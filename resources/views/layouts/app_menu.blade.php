@@ -11,7 +11,10 @@
 			<li><a href="{{ route('aturan.index') }}">Aturan</a></li>
         </ul>
     </li>
-    <li><a href="#">Other Page</a></li>
-@else
-
+    <li><a href="{{ route('riwayat.index') }}">Riwayat</a></li>
+    
 @endif
+
+<li><a href="{{ route('konsultasi.identitas') }}">Konsultasi</a></li>
+<li><a href="{{ url('/informasi') }}">Informasi</a></li>
+<li><a href="{{ url('/kontak') }}">Kontak</a></li>

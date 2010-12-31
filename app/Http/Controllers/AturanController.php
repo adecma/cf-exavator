@@ -224,6 +224,6 @@ class AturanController extends Controller
     	$pdf = PDF::loadView('aturan.cetakpdf',compact('aturans', 'no'))
     		->setPaper('a4', 'potrait');
  
-    	return $pdf->stream('report_aturan-'.Carbon::now()->format('Y_m_d-H_i_s').'.pdf');
+    	return $pdf->stream('report_aturan-'.Carbon::now()->format('Y_m_d-U').'.pdf');
     }
 }

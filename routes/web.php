@@ -45,4 +45,25 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/aturan/search', 'AturanController@search')->name('aturan.search');
     Route::get('/aturan/cetakpdf', 'AturanController@cetakPDF')->name('aturan.cetakpdf');
     Route::resource('/aturan', 'AturanController', ['except' => 'show']);
+
+    Route::get('/riwayat/search', 'RiwayatController@search')->name('riwayat.search');
+    Route::get('/riwayat/cetakpdf', 'RiwayatController@cetakPDF')->name('riwayat.cetakpdf');
+    Route::get('/riwayat', 'RiwayatController@index')->name('riwayat.index');
+    Route::delete('/riwayat/{riwayat}', 'RiwayatController@destroy')->name('riwayat.destroy');
+});
+
+
+Route::get('/konsultasi/identitas', 'KonsultasiController@identitas')->name('konsultasi.identitas');
+Route::post('/konsultasi/identitas', 'KonsultasiController@identitas_store')->name('konsultasi.identitas_store');
+Route::delete('/konsultasi/{identitas}', 'KonsultasiController@identitas_destroy')->name('konsultasi.identitas_destroy');
+Route::get('/konsultasi/{identitas}/gejala', 'KonsultasiController@gejala')->name('konsultasi.gejala');
+Route::post('/konsultasi/{identitas}/proses', 'KonsultasiController@proses')->name('konsultasi.proses');
+Route::get('/konsultasi/{identitas}/cetakpdf', 'KonsultasiController@cetakPDF')->name('konsultasi.cetakpdf');
+
+Route::get('/kontak', function(){
+    return view('static.kontak');
+});
+
+Route::get('/informasi', function(){
+    return view('static.informasi');
 });
