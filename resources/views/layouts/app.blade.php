@@ -13,6 +13,8 @@
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 
+    @yield('css')
+
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -43,7 +45,7 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        @include('layouts.app_menu')
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -51,7 +53,6 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -59,6 +60,9 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('home.profil') }}">Profil</a>
+                                    </li>
                                     <li>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
@@ -78,10 +82,20 @@
             </div>
         </nav>
 
-        @yield('content')
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    @include('layouts.app_notif')
+                </div>
+            </div>
+
+            @yield('content')
+        </div>
     </div>
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+
+    @yield('js')
 </body>
 </html>
