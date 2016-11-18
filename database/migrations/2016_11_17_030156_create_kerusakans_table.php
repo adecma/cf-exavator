@@ -14,7 +14,7 @@ class CreateKerusakansTable extends Migration
     public function up()
     {
         Schema::create('kerusakans', function (Blueprint $table) {
-            $table->string('kd')->primary();
+            $table->string('kd', 4)->primary();
             $table->string('nama');
             $table->timestamps();
         });

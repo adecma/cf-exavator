@@ -15,5 +15,13 @@ require('laravel-elixir-vue-2');
 
 elixir(mix => {
     mix.sass('app.scss')
-       .webpack('app.js');
+    	.styles([
+	        'font-awesome.min.css',
+	        'select2.min.css'
+	    ])
+      	.webpack('app.js')
+      	.scripts([
+      		'select2.min.js',
+      		'add-scripts.js'
+      	]);
 });

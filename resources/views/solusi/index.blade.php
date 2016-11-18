@@ -8,6 +8,7 @@
 					{!! $label !!}
 
 					<div class="pull-right">
+						<a href="{{ route('solusi.cetakpdf') }}" class="btn btn-success btn-xs" target="_blank"><i class="fa fa-print"></i></a>
 						<a href="{{ route('solusi.create') }}" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i></a>
 					</div>
 				</div>

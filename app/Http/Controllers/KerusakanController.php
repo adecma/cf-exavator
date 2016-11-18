@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Kerusakan;
+use PDF;
+use Carbon\Carbon;
 
 class KerusakanController extends Controller
 {    
@@ -168,5 +170,17 @@ class KerusakanController extends Controller
                 'cari' => 'required'
             ]);
         }
+    }
+
+    public function cetakPDF()
+    {
+        $kerusakans = Kerusakan::orderBy('kd', 'asc')->get();
+
+        $no = 1;
+
+        $pdf = PDF::loadView('kerusakan.cetakpdf',compact('kerusakans', 'no'))
+            ->setPaper('a4', 'potrait');
+ 
+        return $pdf->stream('report_kerusakan-'.Carbon::now()->format('Y_m_d-H_i_s').'.pdf');
     }
 }

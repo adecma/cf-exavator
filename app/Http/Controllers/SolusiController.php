@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Solusi;
+use PDF;
+use Carbon\Carbon;
 
 class SolusiController extends Controller
 {    
@@ -169,5 +171,17 @@ class SolusiController extends Controller
                 'cari' => 'required'
             ]);
         }
+    }
+
+    public function cetakPDF()
+    {
+        $solusis = Solusi::orderBy('kd', 'asc')->get();
+
+        $no = 1;
+
+        $pdf = PDF::loadView('solusi.cetakpdf',compact('solusis', 'no'))
+            ->setPaper('a4', 'potrait');
+ 
+        return $pdf->stream('report_solusi-'.Carbon::now()->format('Y_m_d-H_i_s').'.pdf');
     }
 }

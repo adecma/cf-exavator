@@ -8,7 +8,7 @@
             <li><a href="{{ route('gejala.index') }}">Gejala</a></li>
 			<li><a href="{{ route('kerusakan.index') }}">Kerusakan</a></li>
 			<li><a href="{{ route('solusi.index') }}">Solusi</a></li>
-			<li><a href="#">Role CF</a></li>
+			<li><a href="{{ route('aturan.index') }}">Aturan</a></li>
         </ul>
     </li>
     <li><a href="#">Other Page</a></li>

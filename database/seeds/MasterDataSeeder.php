@@ -5,6 +5,7 @@ use Illuminate\Database\Seeder;
 use App\Gejala;
 use App\Kerusakan;
 use App\Solusi;
+use App\Aturan;
 
 class MasterDataSeeder extends Seeder
 {

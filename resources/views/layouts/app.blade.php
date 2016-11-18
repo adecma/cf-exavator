@@ -13,6 +13,8 @@
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="{{ elixir('css/all.css') }}">
+
     @yield('css')
 
     <!-- Scripts -->
@@ -95,6 +97,8 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+
+    <script src="{{ elixir('js/all.js') }}"></script>
 
     @yield('js')
 </body>

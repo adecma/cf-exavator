@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Gejala;
+use PDF;
+use Carbon\Carbon;
 
 class GejalaController extends Controller
 {    
@@ -169,5 +171,17 @@ class GejalaController extends Controller
                 'cari' => 'required'
             ]);
         }
+    }
+
+    public function cetakPDF()
+    {
+        $gejalas = Gejala::orderBy('kd', 'asc')->get();
+
+        $no = 1;
+
+        $pdf = PDF::loadView('gejala.cetakpdf',compact('gejalas', 'no'))
+            ->setPaper('a4', 'potrait');
+ 
+        return $pdf->stream('report_gejala-'.Carbon::now()->format('Y_m_d-H_i_s').'.pdf');
     }
 }

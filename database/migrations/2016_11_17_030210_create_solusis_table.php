@@ -14,7 +14,7 @@ class CreateSolusisTable extends Migration
     public function up()
     {
         Schema::create('solusis', function (Blueprint $table) {
-            $table->string('kd')->primary();
+            $table->string('kd', 4)->primary();
             $table->string('nama');
             $table->timestamps();
         });
