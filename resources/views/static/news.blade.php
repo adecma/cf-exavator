@@ -9,7 +9,7 @@
 				</div>
 				<div class="panel-body">
 					<p class="text-center">
-						Deskripsi informasi jjj adsa d a
+						<i class="fa fa-book"></i> Informasi bebas sesuai dengan profil kantor
 					</p>
 				</div>
 			</div>
