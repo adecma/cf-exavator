@@ -5,16 +5,16 @@
         </a>
 
         <ul class="dropdown-menu" role="menu">
-            <li><a href="{{ route('gejala.index') }}">Gejala</a></li>
-			<li><a href="{{ route('kerusakan.index') }}">Kerusakan</a></li>
-			<li><a href="{{ route('solusi.index') }}">Solusi</a></li>
-			<li><a href="{{ route('aturan.index') }}">Aturan</a></li>
+            <li {!! substr(Route::currentRouteName(), 0, 6) == 'gejala' ? 'class="active"' : '' !!}><a href="{{ route('gejala.index') }}">Gejala</a></li>
+			<li {!! substr(Route::currentRouteName(), 0, 9) == 'kerusakan' ? 'class="active"' : '' !!}><a href="{{ route('kerusakan.index') }}">Kerusakan</a></li>
+			<li {!! substr(Route::currentRouteName(), 0, 6) == 'solusi' ? 'class="active"' : '' !!}><a href="{{ route('solusi.index') }}">Solusi</a></li>
+			<li {!! substr(Route::currentRouteName(), 0, 6) == 'aturan' ? 'class="active"' : '' !!}><a href="{{ route('aturan.index') }}">Aturan</a></li>
         </ul>
     </li>
-    <li><a href="{{ route('riwayat.index') }}">Riwayat</a></li>
+    <li {!! substr(Route::currentRouteName(), 0, 7) == 'riwayat' ? 'class="active"' : '' !!}><a href="{{ route('riwayat.index') }}">Riwayat</a></li>
     
 @endif
 
-<li><a href="{{ route('konsultasi.identitas') }}">Konsultasi</a></li>
-<li><a href="{{ url('/informasi') }}">Informasi</a></li>
-<li><a href="{{ url('/kontak') }}">Kontak</a></li>
+<li {!! substr(Route::currentRouteName(), 0, 10) == 'konsultasi' ? 'class="active"' : '' !!}><a href="{{ route('konsultasi.identitas') }}">Konsultasi</a></li>
+<li {!! Route::currentRouteName() == 'informasi' ? 'class="active"' : '' !!}><a href="{{ url('/informasi') }}">Informasi</a></li>
+<li {!! Route::currentRouteName() == 'kontak' ? 'class="active"' : '' !!}><a href="{{ url('/kontak') }}">Kontak</a></li>
