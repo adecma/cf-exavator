@@ -15,7 +15,7 @@ class KonsultasiController extends Controller
 {
     public function identitas()
     {
-        $label = 'Identitas Anda';
+        $label = 'Konsultasi';
         return view('konsultasi.identitas', compact('label'));
     }
 
@@ -43,7 +43,7 @@ class KonsultasiController extends Controller
     	//$gejalas = Gejala::orderBy('nama', 'asc')->get();
         $gejalas2 = Gejala::orderBy('nama', 'asc')->pluck('nama', 'kd');
 
-    	$label = 'Pilih gejala';
+    	$label = 'Konsultasi';
 
     	return view('konsultasi.gejala2', compact('gejalas2', 'label', 'riwayat'));
     }
@@ -52,10 +52,10 @@ class KonsultasiController extends Controller
     {
         $riwayat = Riwayat::findOrFail($id);
 
-        $label = '<a href="'.route('konsultasi.gejala', $riwayat->id).'" class="btn btn-default btn-xs"><i class="fa fa-arrow-left"></i></a> Hasil akhir';
+        $label = '<a href="'.route('konsultasi.gejala', $riwayat->id).'" class="btn btn-default btn-xs"><i class="fa fa-arrow-left"></i></a> Konsultasi';
 
     	$this->validate($request, [
-            'gejala' => 'required|exists:gejalas,kd',
+            'gejala' => 'required|min:2|exists:gejalas,kd',
         ]);
 
         $kerusakans = Kerusakan::whereHas('aturans', function($aturans) use($request){

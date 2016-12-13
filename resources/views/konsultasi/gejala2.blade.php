@@ -10,11 +10,9 @@
 
 				{!! Form::open(['route' => ['konsultasi.proses', $riwayat->id], 'class' => 'form-horizontal']) !!}
 					<div class="panel-body">
-						@if($errors->has('gejala'))
-							<p class="text-center text-danger">
-								<span class="has-error">{{ $errors->first('gejala') }}</span>
-							</p>
-						@endif
+						<p class="text-center">
+							<strong>Pilih Gejala</strong>
+						</p>
 
 						<div class="form-group {{ $errors->has('gejala') ? 'has-error' : '' }}">
 							<div class="col-sm-12">

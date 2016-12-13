@@ -12,7 +12,11 @@
 				</div>
 
 				<div class="panel-body">
-					<h3>A. Identitas</h3>
+					<p class="text-center">
+						<strong>Hasil Akhir</strong>
+					</p>
+
+					<h4>A. Identitas</h4>
 					<dl class="dl-horizontal">
 						<dt>Nama</dt>
 						<dd>{{ $riwayat->nama }}</dd>
@@ -22,7 +26,7 @@
 						<dd>{{ $riwayat->kontak }}</dd>
 					</dl>
 
-					<h3>B. Gejala yang dipilih</h3>
+					<h4>B. Gejala yang dipilih</h4>
 
 					<ul>
 						@foreach($gejalas as $gejala)
@@ -30,7 +34,7 @@
 						@endforeach
 					</ul>
 
-					<h3>C. Nilai CF</h3>
+					<h4>C. Nilai CF</h4>
 					<div class="table-responsive">
 						<table class="table table-hover">
 							<thead>
@@ -60,7 +64,7 @@
 						</table>
 					</div>
 
-					<h3>D. Diagnosa</h3>
+					<h4>D. Diagnosa</h4>
 					<dl class="dl-horizontal">
 						<dt>Kerusakan</dt>
 						<dd>{{ $kesimpulan['kerusakan_nama'] }}</dd>
