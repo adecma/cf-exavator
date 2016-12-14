@@ -40,7 +40,7 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Penyakit</th>
+									<th>Kerusakan</th>
 									<th>CF</th>
 								</tr>
 							</thead>
