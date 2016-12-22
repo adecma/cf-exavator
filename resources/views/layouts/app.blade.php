@@ -47,7 +47,7 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        @include('layouts.app_menu')
+                        
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -90,8 +90,28 @@
                     @include('layouts.app_notif')
                 </div>
             </div>
+            
+            <div class="row">
+                <div class="col-md-9">
+                    @yield('content')
+                </div>
 
-            @yield('content')
+                <div class="col-md-3">
+                    @include('layouts.app_menu_right_sidebar')
+                </div>
+            </div>            
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading text-center">
+                            <p>Copyright 2016 - PT Intraco Penta</p>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
         </div>
     </div>
 

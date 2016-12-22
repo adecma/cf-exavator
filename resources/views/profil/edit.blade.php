@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-12">
 			<div class="panel panel-default">
 				{!! Form::open(['route' => 'home.profil_update', 'class' => 'form-horizontal', 'method' => 'put']) !!}
 					<div class="panel-heading">Edit Profile {{ $user->name }}</div>
