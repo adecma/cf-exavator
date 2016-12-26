@@ -20,16 +20,16 @@ class Aturan extends Model
 
 	public function getKerusakanListAttribute()
     {
-        return $this->kerusakan->pluck('kd')->toArray();
+        return $this->kerusakan->kd;
     } 
 
     public function getGejalaListAttribute()
     {
-        return $this->gejala->pluck('kd')->toArray();
+        return $this->gejala->kd;
     } 
 
     public function getSolusiListAttribute()
     {
-        return $this->solusi->pluck('kd')->toArray();
+        return $this->solusi->kd;
     } 
 }
