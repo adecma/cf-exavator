@@ -11,7 +11,7 @@
 				{!! Form::open(['route' => 'konsultasi.identitas_store', 'class' => 'form-horizontal']) !!}
 					<div class="panel-body">	
 						<p class="text-center">
-							<strong>Masukkan identitas Anda sebelum melanjutkan</strong>
+							<strong>Masukkan nama Anda sebelum melanjutkan</strong>
 						</p>		
 
 						<hr>
@@ -28,35 +28,7 @@
 									</span>
 								@endif
 							</div>
-						</div>	
-
-						<div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
-							{{ Form::label('email', 'Email', ['class' => 'control-label col-sm-4']) }}
-								
-							<div class="col-sm-6">
-								{{ Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email anda', 'autocomplete' =>'off']) }}
-									
-								@if($errors->has('email'))
-									<span class="help-block">
-										{{ $errors->first('email') }}
-									</span>
-								@endif
-							</div>
-						</div>	
-
-						<div class="form-group {{ $errors->has('kontak') ? 'has-error' : '' }}">
-							{{ Form::label('kontak', 'Kontak', ['class' => 'control-label col-sm-4']) }}
-								
-							<div class="col-sm-6">
-								{{ Form::text('kontak', null, ['class' => 'form-control', 'placeholder' => 'Kontak anda', 'autocomplete' =>'off']) }}
-									
-								@if($errors->has('kontak'))
-									<span class="help-block">
-										{{ $errors->first('kontak') }}
-									</span>
-								@endif
-							</div>
-						</div>						
+						</div>							
 					</div>
 
 					<div class="panel-footer">	

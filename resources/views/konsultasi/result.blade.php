@@ -20,10 +20,6 @@
 					<dl class="dl-horizontal">
 						<dt>Nama</dt>
 						<dd>{{ $riwayat->nama }}</dd>
-						<dt>Email</dt>
-						<dd>{{ $riwayat->email }}</dd>
-						<dt>Kontak</dt>
-						<dd>{{ $riwayat->kontak }}</dd>
 					</dl>
 
 					<h4>B. Gejala yang dipilih</h4>

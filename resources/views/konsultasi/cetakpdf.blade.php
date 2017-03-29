@@ -48,8 +48,6 @@
                                         <tr>
                                             <td class="tg-rv4w" width="30%">
                                                 {{ $riwayat->nama }} <br>
-                                                {{ $riwayat->email }} <br>
-                                                {{ $riwayat->kontak }} <br>
                                                 {{ $riwayat->updated_at->format('d F Y') }}
                                             </td>
                                             <td class="tg-rv4w" width="50%">

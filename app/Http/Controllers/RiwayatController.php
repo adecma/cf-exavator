@@ -44,8 +44,6 @@ class RiwayatController extends Controller
         if ($request->has('cari')) {
 
             $riwayats = Riwayat::where('nama', 'like', '%'.$request->input('cari').'%')
-                ->orWhere('email', 'like', '%'.$request->input('cari').'%')
-                ->orWhere('kontak', 'like', '%'.$request->input('cari').'%')
                 ->orWhere('gejala', 'like', '%'.$request->input('cari').'%')
                 ->orWhere('kerusakan', 'like', '%'.$request->input('cari').'%')
                 ->orWhere('solusi', 'like', '%'.$request->input('cari').'%')

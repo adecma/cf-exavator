@@ -23,14 +23,14 @@ class KonsultasiController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required|min:3',
-            'email' => 'required|email',
-            'kontak' => 'required|numeric|digits_between:10,13',
+            //'email' => 'required|email',
+            //'kontak' => 'required|numeric|digits_between:10,13',
         ]);
 
         $riwayat = new Riwayat;
         $riwayat->nama = $request->input('nama');
-        $riwayat->email = $request->input('email');
-        $riwayat->kontak = $request->input('kontak');
+        //$riwayat->email = $request->input('email');
+        //$riwayat->kontak = $request->input('kontak');
         $riwayat->save();
 
         return redirect()->route('konsultasi.gejala', $riwayat->id);

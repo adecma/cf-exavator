@@ -50,8 +50,6 @@
 											<td>{{ $no++ }}</td>
 											<td>
 												{{ $riwayat->nama }} <br>
-												{{ $riwayat->email }} <br>
-												{{ $riwayat->kontak }} <br>
 												{{ $riwayat->updated_at->format('d F Y') }}
 											</td>
 											<td>
