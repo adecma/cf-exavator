@@ -1,8 +1,12 @@
 # cf-exavator
 WebApp Sistem Pakar Diagnosa Alat Berat Exavator dengan Metode CF
 
-## Update
-~ Minggu, 4 Desember 2016
-Modifikasi halaman utama, halaman informasi dan halaman kontak. Menambahkan active menu.
-~ Kamis, 22 Desember 2016
-Move parent menu to right sidebar, add footer
+## Install
+* Clone or Download
+* Extract
+* Composer Install
+* Salin file .env.example ke .env
+* Generate Key
+* Sesuaikan konfigurasi database
+* Migrasi dan seed database
+* Default account on `database/seeds/UserSeeder.php`
