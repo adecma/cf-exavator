@@ -2,11 +2,10 @@
 WebApp Sistem Pakar Diagnosa Alat Berat Exavator dengan Metode CF
 
 ## Install
-* Clone or Download
-* Extract
-* Composer Install
+* Clone or (Download dan Extract) 
+* `composer install`
 * Salin file .env.example ke .env
-* Generate Key
+* `php artisan key:generate`
 * Sesuaikan konfigurasi database
-* Migrasi dan seed database
+* `php artisan migrate --seed`
 * Default account on `database/seeds/UserSeeder.php`
